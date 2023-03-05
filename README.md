@@ -1,74 +1,151 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<a name="readme-top"></a>
 
-## Available Scripts
+<br />
+<div align="center">
+  <a href="https://github.com/zarns/portfolio">
+    <img src="public/favicon.ico" alt="Logo" width="80" height="80">
+  </a>
 
-In the project directory, you can run:
+  <h3 align="center">React Porfolio</h3>
 
-### `npm start`
+  <p align="center">
+    <a href="https://mason.zarns.net">mason.zarns.net</a>
+  </p>
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[![screenshot][portfolio-screenshot]][portfolio-url]
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<details>
+  <summary>Table of Contents :bowtie:</summary>
+  <ol>
+    <li>
+      <a href="#about">About</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
+<br/>
 
-### `npm test`
+## About
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Currently working on integrating a chess game into the site.
 
-### `npm run build`
+### Built With
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[![Next][Next.js]][Next-url]
+[![React][React.js]][React-url]
+[![NodeJS][NodeJS]][Node-url]
+[![TypeScript][TypeScript]][TypeScript-url]
+[![TailwindCSS][Tailwind]][Tailwind-url]
+[![Sass][Sass]][Sass-url]
+[![Yarn][Yarn]][Yarn-url]
+[![NPM][NPM]][NPM-url]
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To get your own portfolio up and running follow these steps.
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Install NodeJS
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   [https://nodejs.org](https://nodejs.org/en/#home-downloadhead)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Install NPM & Yarn
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```sh
+   npm install npm@latest -g
+   ```
 
-## Learn More
+   ```sh
+   npm install --global yarn
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Install gh-pages
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```sh
+   npm install gh-pages --save-dev
+   ```
 
-### Code Splitting
+4. Probably some other things I forgot along the way
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   :wink:
 
-### Analyzing the Bundle Size
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Clone the repo
 
-### Making a Progressive Web App
+   ```sh
+   git clone https://github.com/zarns/portfolio.git
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. Run locally on `port 3000`
 
-### Advanced Configuration
+   ```sh
+   yarn dev
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    * Open [http://localhost:3000/](http://localhost:3000/) in browser
+    * Edit a file and save. Watch changes deploy locally in seconds. Start with `src/data/data.tsx`
 
-### Deployment
+3. Build and deploy to `Github Pages`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   ```sh
+   yarn run deploy
+   ```
 
-### `npm run build` fails to minify
+   * Note: This will run a script from `/package.json` to push a compiled react app to the gh-pages branch in your git repo. Check in your github pages settings that the app is being deployed from the gh-pages branch and root directory.
+   * Github Pages provides a domain. If you want to use a custom domain: [using-custom-domains-for-react-apps-deployed-to-github-pages](https://www.pluralsight.com/guides/using-custom-domains-for-react-apps-deployed-to-github-pages)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgments
 
-### Credit to
+I went into this project with limited frontend experience and followed a number of tutorials before feeling comfortable enough to pull ideas from different places. Major thanks to these resources:
 
-[template](https://github.com/tbakerx/react-resume-template)
+* [braydoncoyer-porfolio](https://github.com/braydoncoyer/braydoncoyer.dev)
+* [soumyajit-porfolio](https://github.com/soumyajit4419/Portfolio)
+* [ariful-gitprofile](https://github.com/arifszn/gitprofile)
+* [portfolio-v2](https://github.com/CodeVinayak/Portfolio-v2)
+* [react-resume](https://github.com/tbakerx/react-resume-template)
+* [leerob.io](https://github.com/leerob/leerob.io)
+* [readme-template](https://github.com/othneildrew/Best-README-Template)
+* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Image Shields](https://shields.io)
+* [GitHub Pages](https://pages.github.com)
+* [React Icons](https://react-icons.github.io/react-icons/search)
+* [Hero Icons](https://heroicons.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/mason-zarns
+[portfolio-screenshot]: public/homepage.png
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[portfolio-url]: https://mason.zarns.net
+[NodeJS]: https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white
+[Node-url]: https://nodejs.org/en/
+[Tailwind-url]: https://tailwindcss.com/
+[Tailwind]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
+[Sass]: https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white
+[Sass-url]: https://sass-lang.com/
+[Yarn]: https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white
+[Yarn-url]: https://www.npmjs.com/package/yarn
+[NPM]: https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white
+[NPM-url]: https://www.npmjs.com/
+[TypeScript]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
+[TypeScript-url]: https://www.typescriptlang.org/

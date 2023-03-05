@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "2.0.0",  
+  "version": "2.0.0",
   "homepage": "https://zarns.github.io/",
   "private": true,
   "scripts": {
@@ -10,7 +10,8 @@
     "dev": "yarn compile && yarn next dev",
     "lint": "yarn run -T prettier --write './src/**/*.{js,jsx,json,ts,tsx}' && eslint './src/**/*.{js,jsx,ts,tsx}' --fix --max-warnings=0",
     "start": "yarn next start",
-    "sitemap": "yarn next-sitemap"
+    "sitemap": "yarn next-sitemap",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@headlessui/react": "^1.5.0",
@@ -18,6 +19,7 @@
     "autoprefixer": "^10.4.2",
     "classnames": "^2.3.1",
     "next": "^12.1.0",
+    "next-sitemap": "^4.0.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "ts-pattern": "^4.0.3"

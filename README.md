@@ -99,13 +99,10 @@ To get your own portfolio up and running follow these steps.
     * Open [http://localhost:3000/](http://localhost:3000/) in browser
     * Edit a file and save. Watch changes deploy locally in seconds. Start with `src/data/data.tsx`
 
-3. Build and deploy to `Github Pages`
+3. Github Actions
 
-   ```sh
-   yarn run deploy
-   ```
-
-   * Note: This will run a script from `/package.json` to push a compiled react app to the gh-pages branch in your git repo. Check in your github pages settings that the app is being deployed from the gh-pages branch and root directory.
+   * Upon pushing to the main branch, the script: `.github/workflows/nextjs.yml` will automatically run in Github Actions (you can check progress in the Actions section of your repo) This should automatically install dependencies, build the project, and deploy the server! :innocent:
+   * Check in your Github Pages settings that the app is being deployed from the main branch and root directory.
    * Github Pages provides a domain. If you want to use a custom domain: [using-custom-domains-for-react-apps-deployed-to-github-pages](https://www.pluralsight.com/guides/using-custom-domains-for-react-apps-deployed-to-github-pages)
 
 ## Acknowledgments

@@ -85,7 +85,7 @@ export const heroData: Hero = {
   ),
   actions: [
     {
-      href: 'zarnsresume.pdf',
+      href: '/zarnsresume.pdf',
       text: 'Resume',
       primary: true,
       Icon: DownloadIcon,
@@ -291,12 +291,16 @@ export const contact: ContactSection = {
     {
       type: ContactType.Email,
       text: 'mason@zarns.net',
-      href: 'mailto:mason@zarns.net',
     },
     {
       type: ContactType.Github,
       text: 'github.com/zarns',
       href: 'https://github.com/zarns',
+    },
+    {
+      type: ContactType.LinkedIn,
+      text: 'mason-zarns',
+      href: 'https://www.linkedin.com/in/mason-zarns/',
     },
     {
       type: ContactType.Location,

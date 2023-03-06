@@ -224,8 +224,8 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'University of Minnesota - Twin Cities',
+    date: 'December 2022',
+    location: 'University of Minnesota',
     title: 'B.S. Computer Science',
     content: 
     <p>
@@ -242,7 +242,7 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
-    date: 'May 2022 - Dec 2022',
+    date: 'May - Dec 2022',
     location: 'Code42',
     title: 'Cloud SWE Intern',
     content: (

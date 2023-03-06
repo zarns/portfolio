@@ -11,7 +11,8 @@
     "lint": "yarn run -T prettier --write './src/**/*.{js,jsx,json,ts,tsx}' && eslint './src/**/*.{js,jsx,ts,tsx}' --fix --max-warnings=0",
     "start": "yarn next start",
     "sitemap": "yarn next-sitemap",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "export": "yarn next export"
   },
   "dependencies": {
     "@headlessui/react": "^1.5.0",

@@ -2,6 +2,10 @@
 
 // https://github.com/vercel/next.js/blob/master/packages/next/next-server/server/config.ts
 const nextConfig = {
+  images: {
+    loader: 'akamai',
+    path: '',
+  },
   webpack: config => {
     const oneOfRule = config.module.rules.find(rule => rule.oneOf);
 
@@ -32,4 +36,5 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+// module.exports = nextConfig;
+export default nextConfig;

@@ -19,6 +19,7 @@ import monkeyImage from '../images/portfolio/monkey.jpg';
 import quoridorImage from '../images/portfolio/quoridor.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
+import porfolioImage from '../../public/homepage.png'
 
 import {
   About,
@@ -188,8 +189,14 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
+    title: 'Portfolio Website',
+    description: 'Check out the source code for this very website!',
+    url: 'https://github.com/zarns/portfolio',
+    image: porfolioImage,
+  },
+  {
     title: 'Chess AI',
-    description: 'Currently working on integrating a chess app into this page.',
+    description: 'Currently working on integrating a chess app into this website.',
     url: 'https://github.com/zarns/chess-ai',
     image: chessImage,
   },

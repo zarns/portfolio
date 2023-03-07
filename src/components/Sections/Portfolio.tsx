@@ -4,18 +4,32 @@ import Image from 'next/image';
 import {FC, memo, MouseEvent, useCallback, useEffect, useRef, useState} from 'react';
 
 import {isMobile} from '../../config';
-import {portfolioItems, SectionId} from '../../data/data';
+import {portfolioDemos, portfolioItems, SectionId} from '../../data/data';
 import {PortfolioItem} from '../../data/dataDef';
 import useDetectOutsideClick from '../../hooks/useDetectOutsideClick';
 import Section from '../Layout/Section';
-import demoImage from '../../images/portfolio/demo.gif';
 
 const Portfolio: FC = memo(() => {
   return (
     <Section className="bg-neutral-800" sectionId={SectionId.Portfolio}>
       <div className="flex flex-col gap-y-8">
         <h2 className="self-center text-xl font-bold text-white">Check out some of my projects</h2>
-        <Image alt="demo" layout="responsive" src={demoImage} />
+        {/* <Image alt="demo" layout="responsive" src={demoImage} /> */}
+
+        {portfolioDemos.map((item, index) => {
+            const {title, image} = item;
+            return (
+              <div className="pb-6" key={`${title}-${index}`}>
+                <div
+                  className={classNames(
+                    'relative h-max w-full overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl',
+                  )}>
+                  <Image alt={title} layout="responsive" src={image} />
+                </div>
+              </div>
+            );
+          })}
+
         <div className="w-full columns-2 md:columns-3 lg:columns-4">
           {portfolioItems.map((item, index) => {
             const {title, image} = item;

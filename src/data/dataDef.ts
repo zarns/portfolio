@@ -83,6 +83,13 @@ export interface PortfolioItem {
   image: string | StaticImageData;
 }
 
+export interface PortfolioDemo {
+  title: string;
+  description: string;
+  url: string;
+  image: string | StaticImageData;
+}
+
 /**
  * Resume section
  */

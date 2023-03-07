@@ -20,6 +20,7 @@ import quoridorImage from '../images/portfolio/quoridor.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import porfolioImage from '../../public/homepage.png'
+import webcamDemo from '../images/portfolio/demo.gif'
 
 import {
   About,
@@ -27,6 +28,7 @@ import {
   ContactType,
   Hero,
   HomepageMeta,
+  PortfolioDemo,
   PortfolioItem,
   SkillGroup,
   Social,
@@ -187,6 +189,15 @@ export const skills: SkillGroup[] = [
 /**
  * Portfolio section
  */
+export const portfolioDemos: PortfolioDemo[] = [
+  {
+    title: 'Webcam Mouse Demo',
+    description: 'Mouse movement, clicking, scrolling, volume and brightness control',
+    url: 'https://github.com/zarns/gesture-recognition',
+    image: webcamDemo
+  },
+];
+
 export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Webcam Mouse',

@@ -21,6 +21,9 @@ import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import porfolioImage from '../../public/homepage.png'
 import webcamDemo from '../images/portfolio/demo.gif'
+import unitTestingImage from '../images/goodReads/unit_testing.png'
+import gptJokeImage from '../images/goodReads/gpt.png'
+import dalleExampleImage from '../images/goodReads/dalle_example.webp'
 
 import {
   About,
@@ -236,6 +239,27 @@ export const portfolioItems: PortfolioItem[] = [
     image: quoridorImage,
   },
 ];
+
+export const goodReadsItems: PortfolioItem[] = [
+  {
+    title: 'The Art of Unit Testing',
+    description: 'The sacred text',
+    url: 'https://www.artofunittesting.com/tdd-in-kotlin',
+    image: unitTestingImage,
+  },
+  {
+    title: 'Forecasting Language Model Misuse',
+    description: 'Strategies to usher in GPT as a force for good',
+    url: 'https://openai.com/research/forecasting-misuse',
+    image: dalleExampleImage,
+  },
+  {
+    title: 'The Waluigi Effect',
+    description: 'GPT Prompt Engineering Concepts',
+    url: 'https://www.lesswrong.com/posts/D7PumeYTDPfBTp3i7/the-waluigi-effect-mega-post',
+    image: gptJokeImage,
+  },
+]
 
 /**
  * Resume section

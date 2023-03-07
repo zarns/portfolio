@@ -12,9 +12,9 @@ import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import heroImage from '../images/fungus_background.jpg';
-import ballotImage from '../images/portfolio/ivoted.jpg';
+import ballotImage from '../images/portfolio/voting.png';
 import chessImage from '../images/portfolio/chess.jpg';
-import webcamMouseImage from '../images/portfolio/mouse.jpg';
+import gestureImage from '../images/portfolio/gesture_rock.png';
 import monkeyImage from '../images/portfolio/monkey.jpg';
 import quoridorImage from '../images/portfolio/quoridor.jpg';
 import profilepic from '../images/profilepic.jpg';
@@ -189,6 +189,12 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
+    title: 'Webcam Mouse',
+    description: 'For when your mouse runs out of battery. Demo above.',
+    url: 'https://github.com/zarns/gesture-recognition',
+    image: gestureImage,
+  },
+  {
     title: 'Portfolio Website',
     description: 'Check out the source code for this very website!',
     url: 'https://github.com/zarns/portfolio',
@@ -199,12 +205,6 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'Currently working on integrating a chess app into this website.',
     url: 'https://github.com/zarns/chess-ai',
     image: chessImage,
-  },
-  {
-    title: 'Webcam Mouse',
-    description: 'For when your mouse runs out of battery.',
-    url: 'https://github.com/zarns/gesture-recognition',
-    image: webcamMouseImage,
   },
   {
     title: 'Voting Machine',

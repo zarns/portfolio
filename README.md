@@ -78,9 +78,7 @@ To get your own portfolio up and running follow these steps.
    npm install gh-pages --save-dev
    ```
 
-4. Probably some other things I forgot along the way
-
-   :wink:
+4. Probably some other things I forgot along the way :wink:
 
 ### Installation
 
@@ -90,7 +88,17 @@ To get your own portfolio up and running follow these steps.
    git clone https://github.com/zarns/portfolio.git
    ```
 
-2. Run locally on `port 3000`
+2. Setup yarn environment
+
+   ```sh
+   yarn add next
+   ```
+
+   ```sh
+   yarn install
+   ```
+
+3. Run locally on `port 3000`
 
    ```sh
    yarn dev
@@ -99,7 +107,7 @@ To get your own portfolio up and running follow these steps.
     * Open [http://localhost:3000/](http://localhost:3000/) in browser
     * Edit a file and save. Watch changes deploy locally in seconds. Start with `src/data/data.tsx`
 
-3. Github Actions
+4. Github Actions
 
    * Upon pushing to the main branch, the script: `.github/workflows/nextjs.yml` will automatically run in Github Actions (you can check progress in the Actions section of your repo) This should automatically install dependencies, build the project, and deploy the server! :innocent:
    * Check in your Github Pages settings that the app is being deployed from the main branch and root directory.

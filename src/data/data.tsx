@@ -13,7 +13,7 @@ import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import heroImage from '../images/fungus_background.jpg';
 import ballotImage from '../images/portfolio/voting.png';
-import chessImage from '../images/portfolio/chess.jpg';
+import telestrationsImage from '../images/portfolio/telestrations.jpg';
 import gestureImage from '../images/portfolio/gesture_rock.png';
 import monkeyImage from '../images/portfolio/monkey.jpg';
 import quoridorImage from '../images/portfolio/quoridor.jpg';
@@ -24,6 +24,7 @@ import webcamDemo from '../images/portfolio/demo.gif'
 import unitTestingImage from '../images/goodReads/unit_testing.png'
 import gptJokeImage from '../images/goodReads/gpt.png'
 import dalleExampleImage from '../images/goodReads/dalle_example.webp'
+import cleanCodeImage from '../images/goodReads/clean_code.jpg'
 
 import {
   About,
@@ -38,6 +39,7 @@ import {
   TestimonialSection,
   TimelineItem,
 } from './dataDef';
+import React from 'react';
 
 /**
  * Page meta data
@@ -79,14 +81,15 @@ export const heroData: Hero = {
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         When I'm not gaslighting 
         <strong className="text-stone-100">
-          <a href="https://www.bing.com/new"> Bing Chat</a>
+          <a href="https://openai.com/"> ChatGPT</a>
         </strong>, 
         you might find me staring at my 
         <strong className="text-stone-100">
           <a href="https://www.joshuaweissman.com/post/sourdough-bread"> Sourdough Starter</a>
         </strong>,
+        <br></br>
         hoping it works better this time.
-        I'm excited to share my portfolio with you and look forward to hearing from you!
+        I'm excited to share my portfolio with you!
       </p>
     </>
   ),
@@ -112,16 +115,14 @@ export const aboutData: About = {
   profileImageSrc: profilepic,
   description: 
   `I studied Computer Science at UMN with a focus on AI and Machine Learning.
-  Last year, I interned at Code42, and was able to work closely with the Cloud Development Scrum team.
-  I worked on horizontally scalable Spring Boot microservices that combine the best aspects of different AWS products.
   I love asking questions that make engineers' eyes light up.`,
   aboutItems: [
     {label: 'Study', text: 'University of Minnesota-Twin Cities', Icon: AcademicCapIcon},
     {label: 'Location', text: 'Minneapolis, MN', Icon: MapIcon},
     {label: 'Interests', text: 'Cooking, Coffee, Puppy Dogs', Icon: SparklesIcon},
-    {label: 'Employment', text: 'Code42', Icon: OfficeBuildingIcon},
+    {label: 'Employment', text: 'Pearson VUE', Icon: OfficeBuildingIcon},
     {label: 'Music', text: 'Simon & Garfunkel Enthusiast', Icon: MusicNoteIcon},
-    {label: 'Age', text: '23', Icon: CalendarIcon},
+    {label: 'Age', text: '24', Icon: CalendarIcon},
   ],
 };
 
@@ -130,14 +131,10 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Backend',
+    name: 'Languages',
     skills: [
       {
         name: 'Kotlin',
-        level: 8,
-      },
-      {
-        name: 'Python',
         level: 8,
       },
       {
@@ -145,49 +142,44 @@ export const skills: SkillGroup[] = [
         level: 7,
       },
       {
-        name: 'C++',
-        level: 4,
+        name: 'Python',
+        level: 6,
+      },
+      {
+        name: 'TypeScript',
+        level: 5,
+      },
+      {
+        name: 'Rust',
+        level: 4.5,
       },
     ]
   },
   {
-    name: 'Tech',
+    name: 'Frameworks',
     skills: [
       {
-        name: 'AWS',
-        level: 5,
+        name: 'Spring Boot',
+        level: 6,
       },
       {
-        name: 'Google Colab',
-        level: 4,
+        name: 'React',
+        level: 4.5,
       },
       {
         name: 'Docker',
-        level: 5,
+        level: 4.5,
       },
       {
-        name: 'Git',
-        level: 8,
+        name: 'Terraform',
+        level: 4,
       },
+      {
+        name: 'Slack Emojis',
+        level: 5,
+      }
     ],
-  },
-  {
-    name: 'Frontend',
-    skills: [
-      {
-        name: 'React',
-        level: 5,
-      },
-      {
-        name: 'Typescript',
-        level: 5,
-      },
-      {
-        name: 'JavaScript',
-        level: 3,
-      },
-    ],
-  },
+  }
 ];
 
 /**
@@ -216,10 +208,10 @@ export const portfolioItems: PortfolioItem[] = [
     image: porfolioImage,
   },
   {
-    title: 'Chess AI',
-    description: 'Currently working on integrating a chess app into this website.',
-    url: 'https://github.com/zarns/chess-ai',
-    image: chessImage,
+    title: 'Telestrations',
+    description: 'Work in progress.',
+    url: 'https://github.com/zarns/telestrations',
+    image: telestrationsImage,
   },
   {
     title: 'Voting Machine',
@@ -260,6 +252,12 @@ export const goodReadsItems: PortfolioItem[] = [
     url: 'https://www.lesswrong.com/posts/D7PumeYTDPfBTp3i7/the-waluigi-effect-mega-post',
     image: gptJokeImage,
   },
+  {
+    title: 'Clean Code',
+    description: 'Keep it simple, stupid.',
+    url: 'https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?hvadid=598689398819&hvdev=c&hvlocphy=9019605&hvnetw=g&hvqmt=e&hvrand=5298928711652158957&hvtargid=kwd-76050495602&hydadcr=16409_13457184&keywords=clean+code+by+robert+c+martin&qid=1690754778&sr=8-1', 
+    image: cleanCodeImage,
+  }
 ]
 
 /**
@@ -271,29 +269,50 @@ export const education: TimelineItem[] = [
     location: 'University of Minnesota',
     title: 'B.S. Computer Science',
     content: 
-    <p>
-      <strong>Favorite Classes:</strong> Software Engineering, Computer Vision, Machine Learning Fundamentals, 
-      Artificial Intelligence
-    <br></br><br></br>
-      I have a minor in chemistry thanks to
-      <strong>
-          <a href="http://www.savewalterwhite.com/"> Breaking Bad</a>
-      </strong>. Ask me for a chemistry joke!
-    </p>,
+    <>
+      <p style={{marginBottom: '.4em'}}>
+        <strong>Favorite Classes:</strong> Software Design, Computer Vision, Machine Learning, Artificial Intelligence
+      </p>
+      <p>
+        I have a minor in chemistry thanks to{" "}
+        <strong>
+            <a href="http://www.savewalterwhite.com/" style={{textDecoration: 'underline'}}>Breaking Bad</a>
+        </strong>. Ask me for a chemistry joke!
+      </p>
+    </>,
   }
 ];
 
 export const experience: TimelineItem[] = [
+  {
+    date: 'Mar 2023 - Present',
+    location: 'Pearson VUE',
+    title: 'Associate Software Developer',
+    content: (
+      <>
+        <p style={{marginBottom: '.5em'}}>
+          Maintain and develop backend solutions for results processing of virtual exams,
+          tailoring solutions to client needs. Actively involved in VUE's migration to Azure.
+        </p>
+        <p>
+          VUE has partnered with Microsoft to host Azure certification exams. 
+        </p>
+        <p>
+          Try out the {" "}
+          <a href="https://learn.microsoft.com/en-us/certifications/azure-fundamentals/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Azure Fundamentals Exam</a>.
+        </p>
+      </>
+    ),
+  },
   {
     date: 'May - Dec 2022',
     location: 'Code42',
     title: 'Cloud SWE Intern',
     content: (
       <p>
-        Designed and implemented feature that empowers customers 
+        Designed and implemented feature allowing customers 
         to configure their own data storage policies to improve price negotiablility.
-        This feature was built using Kotlin, Spring Boot, Terraform, Docker, Concourse, 
-        AWS(S3, DynamoDB, EC2, Cloudwatch, IAM, etc.)
+        Used Kotlin, Spring Boot, Terraform, Docker, and various AWS Services
       </p>
     ),
   }
@@ -308,17 +327,17 @@ export const testimonial: TestimonialSection = {
     {
       name: 'Discrete Math Professor',
       text: 'Mason was a natural, I didn\'t even know he was in this class!',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/21.jpg',
+      image: 'linus_portrait.jpg',
     },
     {
       name: 'Mike Zarns',
       text: 'Never let the magic smoke out of the PC. Once it escapes, it\'s really hard to put it back.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+      image: 'mike_portrait.jfif',
     },
     {
       name: 'Unknown',
       text: 'One time I saw him spend two hours googling which brand of canned air was best to clean a pc with. He\'s nuts.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
+      image: 'satya_portrait.jpg',
     },
   ],
 };

@@ -83,12 +83,12 @@ export const heroData: Hero = {
         <strong className="text-stone-100">
           <a href="https://openai.com/"> ChatGPT</a>
         </strong>, 
-        you might find me staring at my 
-        <strong className="text-stone-100">
+        you might find me staring at my Venus Flytrap,
+        {/* <strong className="text-stone-100">
           <a href="https://www.joshuaweissman.com/post/sourdough-bread"> Sourdough Starter</a>
-        </strong>,
+        </strong>, */}
         <br></br>
-        hoping it works better this time.
+        hoping it survives the winter.
         I'm excited to share my portfolio with you!
       </p>
     </>

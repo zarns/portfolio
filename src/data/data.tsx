@@ -1,6 +1,7 @@
 import {
   AcademicCapIcon,
   CalendarIcon,
+  MicrophoneIcon,
   DownloadIcon,
   MusicNoteIcon,
   MapIcon,
@@ -123,7 +124,7 @@ export const aboutData: About = {
     {label: 'Interests', text: 'Cooking, Coffee, Puppy Dogs', Icon: SparklesIcon},
     {label: 'Employment', text: 'Pearson VUE', Icon: OfficeBuildingIcon},
     {label: 'Music', text: 'Simon & Garfunkel Enthusiast', Icon: MusicNoteIcon},
-    {label: 'Age', text: '24', Icon: CalendarIcon},
+    {label: 'Fav Podcast', text: 'Lex Fridman', Icon: MicrophoneIcon},
   ],
 };
 

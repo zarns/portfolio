@@ -17,6 +17,7 @@ import telestrationsImage from '../images/portfolio/telestrations.jpg';
 import gestureImage from '../images/portfolio/gesture_rock.png';
 import monkeyImage from '../images/portfolio/monkey.jpg';
 import quoridorImage from '../images/portfolio/quoridor.jpg';
+import brainDisplayImage from '../images/portfolio/brain_display.jpg'
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import porfolioImage from '../../public/homepage.png'
@@ -230,6 +231,12 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'See if you can beat the Monte Carlo Tree Search algorithm. Good luck.',
     url: 'https://github.com/zarns/QuoridorAI',
     image: quoridorImage,
+  },
+  {
+    title: 'ASCII Art',
+    description: 'No need to understand grapheme clusters.',
+    url: 'https://github.com/zarns/ascii-artist',
+    image: brainDisplayImage,
   },
 ];
 

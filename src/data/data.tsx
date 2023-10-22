@@ -342,9 +342,14 @@ export const testimonial: TestimonialSection = {
       image: 'mike_portrait.jfif',
     },
     {
-      name: 'Unknown',
+      name: 'Anonymous',
       text: 'One time I saw him spend two hours googling which brand of canned air was best to clean a pc with. He\'s nuts.',
       image: 'satya_portrait.jpg',
+    },
+    {
+      name: 'Elon Tusk',
+      text: 'He keeps muttering "There\s no place like 127.0.0.1" over and over again. I\'m worried about him.',
+      image: 'elon_portrait.jpg',
     },
   ],
 };

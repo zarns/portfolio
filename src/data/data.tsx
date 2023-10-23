@@ -1,6 +1,5 @@
 import {
   AcademicCapIcon,
-  CalendarIcon,
   MicrophoneIcon,
   DownloadIcon,
   MusicNoteIcon,

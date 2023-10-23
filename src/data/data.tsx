@@ -1,6 +1,7 @@
 import {
   AcademicCapIcon,
   CalendarIcon,
+  MicrophoneIcon,
   DownloadIcon,
   MusicNoteIcon,
   MapIcon,
@@ -17,6 +18,7 @@ import telestrationsImage from '../images/portfolio/telestrations.jpg';
 import gestureImage from '../images/portfolio/gesture_rock.png';
 import monkeyImage from '../images/portfolio/monkey.jpg';
 import quoridorImage from '../images/portfolio/quoridor.jpg';
+import brainDisplayImage from '../images/portfolio/brain_display.jpg'
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import porfolioImage from '../../public/homepage.png'
@@ -122,7 +124,7 @@ export const aboutData: About = {
     {label: 'Interests', text: 'Cooking, Coffee, Puppy Dogs', Icon: SparklesIcon},
     {label: 'Employment', text: 'Pearson VUE', Icon: OfficeBuildingIcon},
     {label: 'Music', text: 'Simon & Garfunkel Enthusiast', Icon: MusicNoteIcon},
-    {label: 'Age', text: '24', Icon: CalendarIcon},
+    {label: 'Fav Podcast', text: 'Lex Fridman', Icon: MicrophoneIcon},
   ],
 };
 
@@ -231,6 +233,12 @@ export const portfolioItems: PortfolioItem[] = [
     url: 'https://github.com/zarns/QuoridorAI',
     image: quoridorImage,
   },
+  {
+    title: 'ASCII Art',
+    description: 'No need to understand grapheme clusters.',
+    url: 'https://github.com/zarns/ascii-artist',
+    image: brainDisplayImage,
+  },
 ];
 
 export const goodReadsItems: PortfolioItem[] = [
@@ -335,9 +343,14 @@ export const testimonial: TestimonialSection = {
       image: 'mike_portrait.jfif',
     },
     {
-      name: 'Unknown',
+      name: 'Anonymous',
       text: 'One time I saw him spend two hours googling which brand of canned air was best to clean a pc with. He\'s nuts.',
       image: 'satya_portrait.jpg',
+    },
+    {
+      name: 'Elon Tusk',
+      text: 'He keeps muttering "There\s no place like 127.0.0.1" over and over again. I\'m worried about him.',
+      image: 'elon_portrait.jpg',
     },
   ],
 };

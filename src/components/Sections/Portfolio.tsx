@@ -29,23 +29,22 @@ const Portfolio: FC = memo(() => {
             );
           })}
 
-          <div className="flex flex-row">
-            <div className="w-full columns-2 md:columns-3 lg:columns-4 flex-1">
-              {portfolioItems.map((item, index) => {
-                const { title, image } = item;
-                return (
-                  <div className="pb-6" key={`${title}-${index}`}>
-                    <div className={classNames(
-                      'relative h-max w-full overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl',
-                    )}>
-                      <Image alt={title} layout="responsive" placeholder="blur" src={image} />
-                      <ItemOverlay item={item} />
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+        <div className="clearfix w-full columns-2 md:columns-3 lg:columns-4 mb-10">
+          {portfolioItems.map((item, index) => {
+            const {title, image} = item;
+            return (
+              <div className="pb-6" key={`${title}-${index}`}>
+                <div
+                  className={classNames(
+                    'relative h-max w-full overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl',
+                  )}>
+                  <Image alt={title} layout="responsive" placeholder="blur" src={image} />
+                  <ItemOverlay item={item} />
+                </div>
+              </div>
+            );
+          })}
+        </div>
 
         {portfolioDemosPart2.map((item, index) => {
           const {title, image} = item;

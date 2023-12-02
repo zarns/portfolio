@@ -225,12 +225,6 @@ export const portfolioItems: PortfolioItem[] = [
     image: ballotImage,
   },
   {
-    title: 'Primate Pose Estimation',
-    description: 'Experiment with different neural net architectures for pose recognition.',
-    url: 'https://github.com/zarns/openMonkeyChallenge',
-    image: monkeyImage,
-  },
-  {
     title: 'Guess-A-Sketch',
     description: 'A game of Telephone, but with drawings. Try with friends!',
     url: 'https://github.com/zarns/guess-a-sketch',
@@ -247,6 +241,12 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'No need to understand grapheme clusters.',
     url: 'https://github.com/zarns/ascii-artist',
     image: brainDisplayImage,
+  },
+  {
+    title: 'Primate Pose Estimation',
+    description: 'Experiment with different neural net architectures for pose recognition.',
+    url: 'https://github.com/zarns/openMonkeyChallenge',
+    image: monkeyImage,
   },
 ];
 

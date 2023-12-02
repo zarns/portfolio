@@ -207,12 +207,6 @@ export const portfolioDemosPart2: PortfolioDemo[] = [
 
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Primate Pose Estimation',
-    description: 'Experiment with different neural net architectures for pose recognition.',
-    url: 'https://github.com/zarns/openMonkeyChallenge',
-    image: monkeyImage,
-  },
-  {
     title: 'Webcam Mouse',
     description: 'For when your mouse runs out of battery. Demo above.',
     url: 'https://github.com/zarns/gesture-recognition',
@@ -229,6 +223,12 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'Visualize the Instant Runoff Voting (IRV) algorithm.',
     url: 'https://github.com/zarns/voting-machine',
     image: ballotImage,
+  },
+  {
+    title: 'Primate Pose Estimation',
+    description: 'Experiment with different neural net architectures for pose recognition.',
+    url: 'https://github.com/zarns/openMonkeyChallenge',
+    image: monkeyImage,
   },
   {
     title: 'Guess-A-Sketch',

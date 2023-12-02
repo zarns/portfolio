@@ -46,6 +46,8 @@ const Portfolio: FC = memo(() => {
           })}
         </div>
 
+        <div className="mt-8"></div>
+
         {portfolioDemosPart2.map((item, index) => {
           const {title, image} = item;
           return (

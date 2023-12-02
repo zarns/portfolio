@@ -4,7 +4,7 @@ import Image from 'next/image';
 import {FC, memo, MouseEvent, useCallback, useEffect, useRef, useState} from 'react';
 
 import {isMobile} from '../../config';
-import {portfolioDemos, portfolioItems, SectionId} from '../../data/data';
+import {portfolioDemosPart1, portfolioDemosPart2, portfolioItems, SectionId} from '../../data/data';
 import {PortfolioItem} from '../../data/dataDef';
 import useDetectOutsideClick from '../../hooks/useDetectOutsideClick';
 import Section from '../Layout/Section';
@@ -15,7 +15,7 @@ const Portfolio: FC = memo(() => {
       <div className="flex flex-col gap-y-8">
         <h2 className="self-center text-xl font-bold text-white">Check out some of my projects</h2>
 
-        {portfolioDemos.map((item, index) => {
+        {portfolioDemosPart1.map((item, index) => {
             const {title, image} = item;
             return (
               <div className="pb-6" key={`${title}-${index}`}>
@@ -45,6 +45,20 @@ const Portfolio: FC = memo(() => {
             );
           })}
         </div>
+
+        {portfolioDemosPart2.map((item, index) => {
+          const {title, image} = item;
+          return (
+            <div className="pb-6" key={`${title}-${index}`}>
+              <div
+                className={classNames(
+                  'relative h-max w-full overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl',
+                )}>
+                <Image alt={title} layout="responsive" src={image} />
+              </div>
+            </div>
+          );
+        })}
       </div>
     </Section>
   );

@@ -13,7 +13,7 @@ import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import heroImage from '../images/fungus_background.jpg';
 import ballotImage from '../images/portfolio/voting.png';
-import telestrationsImage from '../images/portfolio/telestrations.jpg';
+import sketchImage from '../images/portfolio/sketch.png';
 import gestureImage from '../images/portfolio/gesture_rock.png';
 import monkeyImage from '../images/portfolio/monkey.jpg';
 import quoridorImage from '../images/portfolio/quoridor.jpg';
@@ -21,7 +21,8 @@ import brainDisplayImage from '../images/portfolio/brain_display.jpg'
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import porfolioImage from '../../public/homepage.png'
-import webcamDemo from '../images/portfolio/demo.gif'
+import webcamDemo from '../images/portfolio/gesture_demo.gif'
+import sketchDemo from '../images/portfolio/sketch_demo.gif'
 import unitTestingImage from '../images/goodReads/unit_testing.png'
 import gptJokeImage from '../images/goodReads/gpt.png'
 import dalleExampleImage from '../images/goodReads/dalle_example.webp'
@@ -186,7 +187,7 @@ export const skills: SkillGroup[] = [
 /**
  * Portfolio section
  */
-export const portfolioDemos: PortfolioDemo[] = [
+export const portfolioDemosPart1: PortfolioDemo[] = [
   {
     title: 'Webcam Mouse Demo',
     description: 'Mouse movement, clicking, scrolling, volume and brightness control',
@@ -195,7 +196,22 @@ export const portfolioDemos: PortfolioDemo[] = [
   },
 ];
 
+export const portfolioDemosPart2: PortfolioDemo[] = [
+  {
+    title: 'Guess-A-Sketch Demo',
+    description: 'A game of Telephone, but with drawings. Try with friends!',
+    url: 'https://github.com/zarns/guess-a-sketch',
+    image: sketchDemo
+  },
+];
+
 export const portfolioItems: PortfolioItem[] = [
+  {
+    title: 'Primate Pose Estimation',
+    description: 'Experiment with different neural net architectures for pose recognition.',
+    url: 'https://github.com/zarns/openMonkeyChallenge',
+    image: monkeyImage,
+  },
   {
     title: 'Webcam Mouse',
     description: 'For when your mouse runs out of battery. Demo above.',
@@ -209,22 +225,16 @@ export const portfolioItems: PortfolioItem[] = [
     image: porfolioImage,
   },
   {
-    title: 'Telestrations',
-    description: 'Work in progress.',
-    url: 'https://github.com/zarns/telestrations',
-    image: telestrationsImage,
-  },
-  {
     title: 'Voting Machine',
     description: 'Visualize the Instant Runoff Voting (IRV) algorithm.',
     url: 'https://github.com/zarns/voting-machine',
     image: ballotImage,
   },
   {
-    title: 'Primate Pose Estimation',
-    description: 'Experiment with different neural net architectures for pose recognition.',
-    url: 'https://github.com/zarns/openMonkeyChallenge',
-    image: monkeyImage,
+    title: 'Guess-A-Sketch',
+    description: 'A game of Telephone, but with drawings. Try with friends!',
+    url: 'https://github.com/zarns/guess-a-sketch',
+    image: sketchImage,
   },
   {
     title: 'Quoridor AI',

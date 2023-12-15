@@ -27,6 +27,7 @@ import unitTestingImage from '../images/goodReads/unit_testing.png'
 import gptJokeImage from '../images/goodReads/gpt.png'
 import dalleExampleImage from '../images/goodReads/dalle_example.webp'
 import cleanCodeImage from '../images/goodReads/clean_code.jpg'
+import pragmaticProgrammerImage from '../images/goodReads/pragmatic-programmer.jpg'
 
 import {
   About,
@@ -274,7 +275,13 @@ export const goodReadsItems: PortfolioItem[] = [
     description: 'Keep it simple, stupid.',
     url: 'https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?hvadid=598689398819&hvdev=c&hvlocphy=9019605&hvnetw=g&hvqmt=e&hvrand=5298928711652158957&hvtargid=kwd-76050495602&hydadcr=16409_13457184&keywords=clean+code+by+robert+c+martin&qid=1690754778&sr=8-1', 
     image: cleanCodeImage,
-  }
+  },
+  {
+    title: 'Pragmatic Programmer',
+    description: '',
+    url: 'https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/', 
+    image: pragmaticProgrammerImage,
+  },
 ]
 
 /**

@@ -28,6 +28,7 @@ import gptJokeImage from '../images/goodReads/gpt.png'
 import dalleExampleImage from '../images/goodReads/dalle_example.webp'
 import cleanCodeImage from '../images/goodReads/clean_code.jpg'
 import pragmaticProgrammerImage from '../images/goodReads/pragmatic-programmer.jpg'
+import maze2Image from '../images/portfolio/maze2.png'
 
 import {
   About,
@@ -208,6 +209,12 @@ export const portfolioDemosPart2: PortfolioDemo[] = [
 
 export const portfolioItems: PortfolioItem[] = [
   {
+    title: 'D* lite Algorithm',
+    description: 'Experiment with the maze to understand the dynamic pathfinding algorithm.',
+    url: 'https://github.com/zarns/openMonkeyChallenge',
+    image: maze2Image,
+  },
+  {
     title: 'Webcam Mouse',
     description: 'For when your mouse runs out of battery. Demo above.',
     url: 'https://github.com/zarns/gesture-recognition',
@@ -220,16 +227,16 @@ export const portfolioItems: PortfolioItem[] = [
     image: porfolioImage,
   },
   {
-    title: 'Voting Machine',
-    description: 'Visualize the Instant Runoff Voting (IRV) algorithm.',
-    url: 'https://github.com/zarns/voting-machine',
-    image: ballotImage,
-  },
-  {
     title: 'Guess-A-Sketch',
     description: 'A game of Telephone, but with drawings. Try with friends!',
     url: 'https://github.com/zarns/guess-a-sketch',
     image: sketchImage,
+  },
+  {
+    title: 'Voting Machine',
+    description: 'Visualize the Instant Runoff Voting (IRV) algorithm.',
+    url: 'https://github.com/zarns/voting-machine',
+    image: ballotImage,
   },
   {
     title: 'Quoridor AI',

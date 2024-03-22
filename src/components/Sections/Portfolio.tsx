@@ -8,7 +8,6 @@ import {portfolioDemosPart1, portfolioDemosPart2, portfolioItems, SectionId} fro
 import {PortfolioItem} from '../../data/dataDef';
 import useDetectOutsideClick from '../../hooks/useDetectOutsideClick';
 import Section from '../Layout/Section';
-import { title } from 'process';
 
 const Portfolio: FC = memo(() => {
   return (

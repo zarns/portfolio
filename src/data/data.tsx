@@ -285,7 +285,7 @@ export const goodReadsItems: PortfolioItem[] = [
   },
   {
     title: 'Pragmatic Programmer',
-    description: '',
+    description: 'How many programmers does it take to change a lightbulb? None, that\'s a hardware problem.',
     url: 'https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/', 
     image: pragmaticProgrammerImage,
   },

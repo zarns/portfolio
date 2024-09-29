@@ -29,6 +29,9 @@ import dalleExampleImage from '../images/goodReads/dalle_example.webp'
 import cleanCodeImage from '../images/goodReads/clean_code.jpg'
 import pragmaticProgrammerImage from '../images/goodReads/pragmatic-programmer.jpg'
 import maze2Image from '../images/portfolio/maze2.png'
+import catanatronImage from '../images/portfolio/catanatron.png'
+import arxivImage from '../images/goodReads/arxiv.png'
+import pythonBookImage from '../images/goodReads/pythonBook.jpg'
 
 import {
   About,
@@ -138,20 +141,20 @@ export const skills: SkillGroup[] = [
     name: 'Languages',
     skills: [
       {
-        name: 'Kotlin',
+        name: 'Java',
         level: 8,
       },
       {
-        name: 'Java',
+        name: 'Python',
+        level: 8,
+      },
+      {
+        name: 'Kotlin',
         level: 7,
       },
       {
-        name: 'Python',
-        level: 6,
-      },
-      {
         name: 'TypeScript',
-        level: 5,
+        level: 5.5,
       },
       {
         name: 'Rust',
@@ -172,7 +175,7 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'Docker',
-        level: 4.5,
+        level: 5,
       },
       {
         name: 'Terraform',
@@ -180,7 +183,7 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'Slack Emojis',
-        level: 5,
+        level: 6,
       }
     ],
   }
@@ -209,9 +212,15 @@ export const portfolioDemosPart2: PortfolioDemo[] = [
 
 export const portfolioItems: PortfolioItem[] = [
   {
+    title: 'Catanatron',
+    description: 'Collaborating to create the world\'s first Superhuman Catan player.',
+    url: 'https://www.catanatron.com/',
+    image: catanatronImage,
+  },
+  {
     title: 'D* lite Algorithm',
     description: 'Experiment with the maze to understand the dynamic pathfinding algorithm.',
-    url: 'https://github.com/zarns/openMonkeyChallenge',
+    url: 'https://www.zarns.net/pathfinder',
     image: maze2Image,
   },
   {
@@ -289,6 +298,24 @@ export const goodReadsItems: PortfolioItem[] = [
     url: 'https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/', 
     image: pragmaticProgrammerImage,
   },
+  {
+    title: 'Proximal Policy Optimization Algorithms',
+    description: 'Catan inspiration',
+    url: 'https://arxiv.org/pdf/1707.06347', 
+    image: arxivImage,
+  },
+  {
+    title: 'Python 3: The Hard Way',
+    description: 'The easy way',
+    url: 'https://books.google.com/books/about/Learn_Python_3_the_Hard_Way.html?id=93YpDwAAQBAJ', 
+    image: pythonBookImage,
+  },
+  {
+    title: '5 Ways NOT to Build a Catan AI',
+    description: 'Still figuring out the right way.',
+    url: 'https://medium.com/@bcollazo2010/5-ways-not-to-build-a-catan-ai-e01bc491af17#:~:text=1.%20Random.%20The%20most%20basic%20benchmark%20is%20the%20bot%20that', 
+    image: catanatronImage,
+  },
 ]
 
 /**
@@ -316,14 +343,14 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
-    date: 'Mar 2023 - Present',
+    date: 'Sep 2024 - Present',
     location: 'Pearson VUE',
-    title: 'Associate Software Developer',
+    title: 'Software Developer',
     content: (
       <>
         <p style={{marginBottom: '.5em'}}>
-          Maintain and develop backend solutions for results processing of virtual exams,
-          tailoring solutions to client needs. Actively involved in VUE's migration to Azure.
+          Develop backend solutions for results processing of virtual exams,
+          tailoring solutions to client needs. 
         </p>
         <p>
           VUE has partnered with Microsoft to host Azure certification exams. 
@@ -332,6 +359,18 @@ export const experience: TimelineItem[] = [
           Try out the {" "}
           <a href="https://learn.microsoft.com/en-us/certifications/azure-fundamentals/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Azure Fundamentals Exam</a>.
         </p>
+      </>
+    ),
+  },
+  {
+    date: 'Mar 2023 - Sep 2024',
+    location: 'Pearson VUE',
+    title: 'Associate Software Developer',
+    content: (
+      <>
+      <p>
+        Spearhead VUE's migration to Azure. Refine monitoring and alerting systems for mission-critical applications.
+      </p>
       </>
     ),
   },

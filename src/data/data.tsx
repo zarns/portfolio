@@ -102,7 +102,7 @@ export const heroData: Hero = {
   ),
   actions: [
     {
-      href: '/zarnsresume.pdf',
+      href: '/ZarnsResume.pdf',
       text: 'Resume',
       primary: true,
       Icon: DownloadIcon,

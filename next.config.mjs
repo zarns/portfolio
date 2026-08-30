@@ -2,10 +2,6 @@
 
 // https://github.com/vercel/next.js/blob/master/packages/next/next-server/server/config.ts
 const nextConfig = {
-  images: {
-    loader: 'akamai',
-    path: '',
-  },
   webpack: config => {
     const oneOfRule = config.module.rules.find(rule => rule.oneOf);
 
@@ -32,6 +28,12 @@ const nextConfig = {
   swcMinify: true,
   trailingSlash: false,
   images: {
+    // Required by `next export`. GitHub Pages serves static files with no image
+    // optimization server, so the default loader cannot run. actions/configure-pages
+    // used to inject this at build time into a generated next.config.js, which meant
+    // local and CI never matched and `next export` only worked in CI. Setting it here
+    // makes both environments identical. This does not change the deployed output.
+    unoptimized: true,
     domains: ['images.unsplash.com', 'source.unsplash.com'],
   },
 };

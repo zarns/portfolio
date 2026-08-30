@@ -27,6 +27,10 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    env:
+      # Corepack asks for confirmation before downloading a package manager. There is
+      # nobody to answer on a runner, so tell it to just go ahead.
+      COREPACK_ENABLE_DOWNLOAD_PROMPT: "0"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -50,16 +54,26 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "16"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
+          # Node 16 is EOL. Transitive deps (node-releases) now require >=18, which
+          # broke `yarn install` outright. 20 is LTS and matches what the project
+          # builds on locally.
+          node-version: "20"
+      - name: Enable Corepack
+        # This project uses Yarn 3 (see "packageManager" in package.json and the
+        # Berry-format yarn.lock). Without Corepack the runner falls back to its
+        # preinstalled Yarn 1, which cannot read a Berry lockfile, silently ignores
+        # it, and resolves every dependency fresh from the registry. That is how a
+        # brand-new node-releases release broke a build that changed no dependencies.
+        run: corepack enable
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        with:
-          # Automatically inject basePath in your Next.js configuration file and disable
-          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
-          #
-          # You may remove this line if you want to manage the configuration yourself.
-          static_site_generator: next
+        # `static_site_generator: next` was removed deliberately. It could not parse
+        # next.config.mjs ("Using default blank configuration" in the run log) so it
+        # generated its own next.config.js, which shadows the real config at build
+        # time. That meant CI built with settings we could never reproduce locally.
+        # next.config.mjs now sets images.unoptimized itself, and basePath is empty
+        # anyway because the site is served from a custom domain (see CNAME), so the
+        # injection bought nothing. CI now builds the same config we test locally.
       - name: Restore cache
         uses: actions/cache@v4
         with:

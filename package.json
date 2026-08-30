@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "homepage": "https://zarns.github.io/",
   "private": true,
+  "packageManager": "yarn@3.4.1",
   "scripts": {
     "build": "yarn compile && yarn next build",
     "clean": "rm -rf build-tsc .next",

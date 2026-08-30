@@ -1,5 +1,6 @@
 import {
   AcademicCapIcon,
+  ChipIcon,
   MicrophoneIcon,
   DownloadIcon,
   MusicNoteIcon,
@@ -86,10 +87,10 @@ export const heroData: Hero = {
         I'm passionate about building things that work.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        When I'm not gaslighting 
+        When I'm not gaslighting
         <strong className="text-stone-100">
-          <a href="https://openai.com/"> ChatGPT</a>
-        </strong>, 
+          <a href="https://claude.ai/"> Claude</a>
+        </strong>,
         you might find me staring at my Venus Flytrap,
         {/* <strong className="text-stone-100">
           <a href="https://www.joshuaweissman.com/post/sourdough-bread"> Sourdough Starter</a>
@@ -103,9 +104,15 @@ export const heroData: Hero = {
   actions: [
     {
       href: '/zarnsresume.pdf',
-      text: 'Resume',
+      text: 'Resume for Humans',
       primary: true,
       Icon: DownloadIcon,
+    },
+    {
+      href: '/zarnsresume-ats.pdf',
+      text: 'Resume for AI',
+      primary: true,
+      Icon: ChipIcon,
     },
     {
       href: `#${SectionId.Contact}`,
@@ -120,14 +127,15 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: 
-  `I studied Computer Science at UMN with a focus on AI and Machine Learning.
-  I love asking questions that make engineers' eyes light up.`,
+  description:
+  `Software Engineer III at Pearson. I ship in the legacy systems nobody else
+  wants to touch, and I spend the rest of my time helping the engineers around me
+  move faster with AI. I love asking questions that make engineers' eyes light up.`,
   aboutItems: [
     {label: 'Study', text: 'University of Minnesota-Twin Cities', Icon: AcademicCapIcon},
     {label: 'Location', text: 'Minneapolis, MN', Icon: MapIcon},
     {label: 'Interests', text: 'Cooking, Coffee, Puppy Dogs', Icon: SparklesIcon},
-    {label: 'Employment', text: 'Pearson VUE', Icon: OfficeBuildingIcon},
+    {label: 'Employment', text: 'Pearson', Icon: OfficeBuildingIcon},
     {label: 'Music', text: 'Simon & Garfunkel Enthusiast', Icon: MusicNoteIcon},
     {label: 'Fav Podcast', text: 'Lex Fridman', Icon: MicrophoneIcon},
   ],
@@ -140,53 +148,25 @@ export const skills: SkillGroup[] = [
   {
     name: 'Languages',
     skills: [
-      {
-        name: 'Java',
-        level: 8,
-      },
-      {
-        name: 'Python',
-        level: 8,
-      },
-      {
-        name: 'Kotlin',
-        level: 7,
-      },
-      {
-        name: 'TypeScript',
-        level: 5.5,
-      },
-      {
-        name: 'Rust',
-        level: 4.5,
-      },
-    ]
+      {name: 'Java', level: 8},
+      {name: 'Python', level: 8},
+      {name: 'SQL', level: 7},
+      {name: 'TypeScript', level: 6},
+      {name: 'Kotlin', level: 6},
+      {name: 'Rust', level: 5},
+    ],
   },
   {
-    name: 'Frameworks',
+    name: 'Platform',
     skills: [
-      {
-        name: 'Spring Boot',
-        level: 6,
-      },
-      {
-        name: 'React',
-        level: 4.5,
-      },
-      {
-        name: 'Docker',
-        level: 5,
-      },
-      {
-        name: 'Terraform',
-        level: 4,
-      },
-      {
-        name: 'Slack Emojis',
-        level: 6,
-      }
+      {name: 'Azure', level: 8},
+      {name: 'Spring Boot', level: 7},
+      {name: 'Angular', level: 6},
+      {name: 'Terraform', level: 5},
+      {name: 'Docker', level: 5},
+      {name: 'Slack Emojis', level: 6},
     ],
-  }
+  },
 ];
 
 /**
@@ -343,33 +323,52 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
-    date: 'Sep 2024 - Present',
-    location: 'Pearson VUE',
-    title: 'Software Developer',
+    date: 'Jan 2026 - Present',
+    location: 'Pearson',
+    title: 'Software Engineer III',
     content: (
       <>
         <p style={{marginBottom: '.5em'}}>
-          Develop backend solutions for results processing of virtual exams,
-          tailoring solutions to client needs. 
+          Lead AI adoption across a 100-engineer organization: an 8-video internal series on
+          real-world agentic workflows, now driving adoption by 20+ engineers including four
+          dev leads and two architects.
         </p>
         <p>
-          VUE has partnered with Microsoft to host Azure certification exams. 
-        </p>
-        <p>
-          Try out the {" "}
-          <a href="https://learn.microsoft.com/en-us/certifications/azure-fundamentals/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Azure Fundamentals Exam</a>.
+          Rebuilt the dependency-update workflow around AI tooling, cutting engineering spend
+          from 43 to 5 hours per week and shipping security fixes twice as fast.
         </p>
       </>
     ),
   },
   {
-    date: 'Mar 2023 - Sep 2024',
-    location: 'Pearson VUE',
-    title: 'Associate Software Developer',
+    date: 'Sep 2024 - Jan 2026',
+    location: 'Pearson',
+    title: 'Software Engineer',
+    content: (
+      <>
+        <p style={{marginBottom: '.5em'}}>
+          Delivered a zero-downtime modernization of a business-critical portal, splitting a
+          monolithic Tomcat application into a CDN-delivered frontend and Kubernetes services:
+          40 integrated applications across a dozen teams, $96K/year in cloud savings.
+        </p>
+        <p>
+          Redesigned defect triage across the dev team for 25% faster resolution and 45% fewer
+          customer escalations.
+        </p>
+      </>
+    ),
+  },
+  {
+    date: 'Apr 2023 - Sep 2024',
+    location: 'Pearson',
+    title: 'Associate Software Engineer',
     content: (
       <>
       <p>
-        Spearhead VUE's migration to Azure. Refine monitoring and alerting systems for mission-critical applications.
+        Spearheaded Pearson's enterprise Azure migration from IaC design through production
+        cutover, cutting infrastructure costs 20% while holding 99.7% availability across
+        10,000+ global test centers. Automated FedRAMP vulnerability remediation for 65%
+        faster time-to-resolution, unlocking $7M in federal contracts.
       </p>
       </>
     ),

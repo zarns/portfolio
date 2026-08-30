@@ -29,7 +29,7 @@ const Hero: FC = memo(() => {
             <div className="flex gap-x-4 text-neutral-100">
               <Socials />
             </div>
-            <div className="flex w-full justify-center gap-x-4">
+            <div className="flex w-full flex-wrap justify-center gap-x-4 gap-y-3">
               {actions.map(({href, text, primary, Icon}) => (
                 <a
                   className={classNames(
